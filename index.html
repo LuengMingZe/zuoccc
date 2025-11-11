@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>旅游发现</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            padding-left: 0; /* 完全贴紧左侧 */
+        }
+        
+        .container {
+            width: 300px; /* 宽度改为300px，节省空间 */
+            background-color: #fff;
+            min-height: 100vh;
+            padding: 20px 0;
+            box-shadow: 0 0 8px rgba(0,0,0,0.05);
+            margin-left: 0; /* 贴紧左侧 */
+        }
+        
+        .header {
+            padding: 0 20px 15px;
+            border-bottom: 1px solid #eee;
+            margin-bottom: 20px;
+        }
+        
+        .header h1 {
+            font-size: 24px;
+            color: #ff385c;
+            font-weight: 600;
+        }
+        
+        .category-list {
+            list-style: none;
+        }
+        
+        .category-item {
+            padding: 15px 20px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .category-link {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: inherit;
+            transition: background-color 0.2s;
+            padding: 5px 0;
+        }
+        
+        .category-link:hover {
+            background-color: #f8f8f8;
+        }
+        
+        /* 统一图标容器样式（旅游分类用emoji，应用用图片） */
+        .category-icon, .app-icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+            /* 图片图标默认背景色，可根据图片调整 */
+            background-color: #f5f5f5;
+        }
+        
+        /* 应用图标图片样式：填充容器且保持比例 */
+        .app-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain; /* 保持图片比例，不拉伸 */
+        }
+        
+        .category-name {
+            flex: 1;
+            font-size: 16px;
+        }
+
+        /* 深黑色分界线 */
+        .divider {
+            height: 1px;
+            background-color: #000;
+            margin: 15px 20px;
+        }
+
+        /* 热门应用区域标题 */
+        .apps-title {
+            padding: 15px 20px;
+            font-size: 16px;
+            color: #333;
+            font-weight: 600;
+            border-bottom: 1px solid #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>发现</h1>
+        </div>
+        
+        <ul class="category-list">
+            <!-- 上半区域：旅游分类（保持emoji图标） -->
+            <li class="category-item">
+                <a href="https://www.ysjf.com/material" class="category-link" target="_blank">
+                    <div class="category-icon">🏜️</div>
+                    <span class="category-name">自然风景</span>
+                </a>
+            </li>
+            
+            <li class="category-item">
+                <a href="https://www.ysjf.com/material" class="category-link" target="_blank">
+                    <div class="category-icon">⛰️</div>
+                    <span class="category-name">山野极光</span>
+                </a>
+            </li>
+            
+            <li class="category-item">
+                <a href="https://www.ysjf.com/material" class="category-link" target="_blank">
+                    <div class="category-icon">🐤</div>
+                    <span class="category-name">动物</span>
+                </a>
+            </li>
+            
+            <li class="category-item">
+                <a href="https://www.ysjf.com/material" class="category-link" target="_blank">
+                    <div class="category-icon">🏙️</div>
+                    <span class="category-name">城隅逐光</span>
+                </a>
+            </li>
+
+            <li class="category-item">
+                <a href="https://www.ysjf.com/home" class="category-link" target="_blank">
+                    <div class="category-icon">❤️‍🔥</div>
+                    <span class="category-name">更多</span>
+                </a>
+            </li>
+
+            <!-- 深黑色分界线 -->
+            <li class="divider"></li>
+
+            <!-- 热门应用区域标题 -->
+            <li class="apps-title">热门应用</li>
+            
+            <!-- 热门应用：使用图片图标（标注了路径输入位置） -->
+            <li class="category-item">
+                <a href="https://www.didiglobal.com/" class="category-link" target="_blank">
+                    <!-- 【滴滴出行图标】替换 src 中的路径为你的图片位置 -->
+                    <div class="app-icon">
+                        <img src="./图片/屏幕截图 2025-11-04 235844.png" alt="滴滴出行图标">
+                    </div>
+                    <span class="category-name">滴滴出行</span>
+                </a>
+            </li>
+            
+            <li class="category-item">
+                <a href="https://www.ly.com/" class="category-link" target="_blank">
+                    <!-- 【同程旅行图标】替换 src 中的路径为你的图片位置 -->
+                    <div class="app-icon">
+                        <img src="./图片/屏幕截图 2025-11-04 235923.png" alt="同程旅行图标">
+                    </div>
+                    <span class="category-name">同程旅行</span>
+                </a>
+            </li>
+            
+            <li class="category-item">
+                <a href="https://www.zuche.com/" class="category-link" target="_blank">
+                    <!-- 【神州租车图标】替换 src 中的路径为你的图片位置 -->
+                    <div class="app-icon">
+                        <img src="./图片/屏幕截图 2025-11-04 235958.png" alt="神州租车图标">
+                    </div>
+                    <span class="category-name">神州租车</span>
+                </a>
+            </li>
+            
+            <!-- 新增：高德地图应用 -->
+            <li class="category-item">
+                <a href="https://ditu.amap.com/" class="category-link" target="_blank">
+                    <!-- 【高德地图图标】替换 src 中的路径为你的图片位置 -->
+                    <div class="app-icon">
+                        <img src="./图片/屏幕截图 2025-10-31 145746.png" alt="高德地图图标">
+                    </div>
+                    <span class="category-name">高德地图</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('旅游发现页面加载完成');
+        });
+    </script>
+</body>
+</html>
